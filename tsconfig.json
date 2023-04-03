@@ -14,8 +14,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["node", "jest", "react", "react-dom", "react-router-dom", "vite/client"]
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "files": ["custom.d.ts"],
+  "rules": {
+    "@typescript-eslint/no-misused-promises": "off",
+  }
 }
