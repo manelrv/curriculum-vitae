@@ -1,7 +1,7 @@
 import manelrv from './assets/images/manelrv.jpg'
 import { SocialIcon } from 'react-social-icons'
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <div>
       <div className='w-full bg-[#404040] text-white'>
@@ -65,10 +65,6 @@ function App() {
         </div>
       </div>
     </div>
-    // <div
-    //     className="bg-[#404040] w-full text-white justify-between flex flex-col items-center justify-center">
-
-    // </div>
   )
 }
 
