@@ -1,0 +1,4 @@
+dist
+build
+build-essential
+vite.config.ts

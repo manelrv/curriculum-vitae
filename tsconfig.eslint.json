@@ -1,0 +1,8 @@
+{
+  "ts-standard": {
+    "ignore": [
+      "dist",
+      "src/**/*.js"
+    ]
+  }
+}
