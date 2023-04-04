@@ -10,7 +10,13 @@
   },
   "dependencies": {
     "@emotion/hash": "^0.9.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.15",
+    "rc-tooltip": "^6.0.1",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-social-icons": "^5.15.0"
   },

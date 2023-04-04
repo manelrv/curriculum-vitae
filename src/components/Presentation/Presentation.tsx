@@ -1,9 +1,15 @@
 import Paragraphs from '../Paragraphs'
 import { presentationItems } from './contants/constants'
+import manelrvLogo from '../../assets/images/manelrvLogo.png'
 const Presentation = (): JSX.Element => {
   return (
-    <div className='w-full bg-gray-900 text-gray-300'>
-      <div className='max-w-[1280px] m-auto flex flex-wrap p-10 shadow-xl text-gray-300'>
+    <div className='w-full bg-gradient-to-r from-gray-900 to-gray-700 text-gray-300'>
+      <div className='max-w-[1280px] m-auto flex flex-col flex-wrap p-10 sm:p-20  text-gray-300'>
+        <img
+          src={manelrvLogo}
+          alt={'manelrv__logo'}
+          className={'m-auto pb-10'}
+        />
         <Paragraphs size={'3xl'} weight={'bold'}>
           Presentación
         </Paragraphs>

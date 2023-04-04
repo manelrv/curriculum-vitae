@@ -1,11 +1,9 @@
-import manelrv from './assets/images/manelrv.jpg'
-import { SocialIcon } from 'react-social-icons'
-import Paragraphs from './components/Paragraphs'
 import NavBar from './components/NavBar'
 import './fonts.css'
 import Presentation from './components/Presentation'
 import Header from './components/Header'
 import ProfessionaExperience from './components/ProfessionaExperience'
+import 'rc-tooltip/assets/bootstrap.css'
 
 const App = (): JSX.Element => {
   return (

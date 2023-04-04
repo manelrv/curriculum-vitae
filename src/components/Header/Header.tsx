@@ -5,8 +5,8 @@ import { socialURLs } from './constants/constants'
 
 const Header = (): JSX.Element => {
   return (
-    <div className='w-full bg-[#404040] text-white pt-10 mt-10'>
-      <div className='max-w-[1280px] m-auto flex flex-col-reverse sm:flex-row flex-wrap p-10 gap-8 sm:gap-0 items-center justify-between'>
+    <div className='w-full bg-[#404040] text-white pt-10 '>
+      <div className='max-w-[1280px] m-auto flex flex-col-reverse sm:flex-row flex-wrap p-10 sm:p-20 gap-8 sm:gap-0 items-center justify-between'>
         <div className='sm:w-2/3 flex flex-col gap-2'>
           <Paragraphs size={'6xl'} className='font-gugi text-green-500'>
             Manel Romero i Vicente
