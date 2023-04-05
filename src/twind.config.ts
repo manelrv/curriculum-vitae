@@ -26,6 +26,12 @@ export default defineConfig({
       montserrat: ['Montserrat', 'sans-serif'],
       inter: ['Inter', 'sans-serif'],
       gugi: ['Gugi', 'cursive']
+    },
+    extend: {
+      colors: {
+        primary: '#289960',
+        secondary: '#27FDFD'
+      }
     }
   },
   hash: (string) => 'manelrv-' + hash(string) + '-prtfl'

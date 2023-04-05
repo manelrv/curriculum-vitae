@@ -17,8 +17,8 @@ export const professionalExperienceItems: Array<{
     role: 'Desarrollador Frontend',
     body: [
       '👨‍💻🖥️ Actualmente trabajo como Frontend Developer en Labelgrup desde 2021, donde me encargo del desarrollo de la parte frontal de aplicaciones web utilizando ReactJS y NextJS.',
-      'Además, también me encargo de la gestión de datos y comunicaciones entre el frontend y el backend, utilizando api rest.',
-      'Las aplicaciones que he desarrollado están enfocadas a la gestión farmaceutica, y se utilizan en farmacias y laboratorios de todo el ámbito nacional.'
+      'Además, también me encargo de la gestión de datos💻 y comunicaciones📞 entre el frontend y el backend, utilizando api rest.',
+      'Las aplicaciones☝️ que he desarrollado están enfocadas a la gestión farmaceutica⚕️, y se utilizan en farmacias y laboratorios🥼 de todo el ámbito nacional.'
     ],
     logo: labelgrupLogo,
     technologies: [

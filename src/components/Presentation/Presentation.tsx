@@ -1,14 +1,18 @@
 import Paragraphs from '../Paragraphs'
 import { presentationItems } from './contants/constants'
 import manelrvLogo from '../../assets/images/manelrvLogo.png'
+import Separator from '../Separator'
 const Presentation = (): JSX.Element => {
   return (
-    <div className='w-full bg-gradient-to-r from-slate-100 to-white text-gray-900 border-b-2 border-zinc-400'>
-      <div className='max-w-[1280px] m-auto flex flex-col flex-wrap p-10 sm:p-20'>
+    <div className='w-full bg-gradient-to-r from-slate-100 to-white text-gray-900'>
+      <div className='max-w-[1280px] m-auto flex flex-col flex-wrap p-10 sm:p-20 relative'>
         <img
           src={manelrvLogo}
           alt={'manelrv__logo'}
-          className={'m-auto w-32 sm:w-50 pb-10'}
+          className={
+            'm-auto absolute self-center w-1/2 left-0 right-0 bottom-0 top-0 m-auto opacity-20 hidden sm:inline-block select-none'
+          }
+          draggable={false}
         />
         <Paragraphs size={'4xl'} weight={'bold'} className={'sm:text-7xl'}>
           Presentación
@@ -29,6 +33,7 @@ const Presentation = (): JSX.Element => {
           </div>
         ))}
       </div>
+      <Separator />
     </div>
   )
 }

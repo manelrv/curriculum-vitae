@@ -2,16 +2,17 @@ import Paragraphs from '../Paragraphs'
 import { SocialIcon } from 'react-social-icons'
 import manelrv from '../../assets/images/manelrv.jpg'
 import { socialURLs } from './constants/constants'
+import Separator from '../Separator'
 
 const Header = (): JSX.Element => {
   return (
-    <div className='w-full bg-zinc-200 text-black pt-10 border-b-2 border-zinc-400 '>
+    <div className='w-full bg-zinc-100 text-black pt-10 '>
       <div className='max-w-[1280px] m-auto flex flex-col-reverse sm:flex-row flex-wrap p-10 sm:p-20 gap-8 sm:gap-0 items-center justify-between'>
-        <div className='sm:w-2/3 flex flex-col gap-2'>
+        <div className='sm:w-2/3 flex flex-col gap-2 items-center sm:items-start'>
           <Paragraphs
             size={'6xl'}
             weight={'semibold'}
-            className='text-green-600'
+            className='text-primary text-center sm:text-left'
           >
             Manel Romero i Vicente
           </Paragraphs>
@@ -21,7 +22,7 @@ const Header = (): JSX.Element => {
           <Paragraphs className='text-2xl text-bold items-center'>
             ✉️ manelrv(at)gmail(dot)com
           </Paragraphs>
-          <div className='flex gap-4 pt-8'>
+          <div className='flex flex-wrap gap-4 pt-8'>
             {socialURLs.map((socialURL, index) => (
               <SocialIcon
                 key={`socialURL-${index}`}
@@ -35,16 +36,18 @@ const Header = (): JSX.Element => {
             ))}
           </div>
         </div>
-        <div className='sm:w-1/3 self-end flex justify-end'>
+        <div className=' self-end flex justify-end  bg-gradient-to-r from-primary to-secondary bg-opacity-20 rounded-full'>
           <img
             src={manelrv}
             alt='manelv__photo__id'
-            className='border-8 rounded-full'
+            className='p-2 rounded-full'
             width={300}
             height={300}
+            draggable={false}
           />
         </div>
       </div>
+      <Separator />
     </div>
   )
 }
