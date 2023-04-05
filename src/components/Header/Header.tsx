@@ -5,21 +5,22 @@ import { socialURLs } from './constants/constants'
 
 const Header = (): JSX.Element => {
   return (
-    <div className='w-full bg-[#404040] text-white pt-10 '>
+    <div className='w-full bg-zinc-200 text-black pt-10 border-b-2 border-zinc-400 '>
       <div className='max-w-[1280px] m-auto flex flex-col-reverse sm:flex-row flex-wrap p-10 sm:p-20 gap-8 sm:gap-0 items-center justify-between'>
         <div className='sm:w-2/3 flex flex-col gap-2'>
-          <Paragraphs size={'6xl'} className='font-gugi text-green-500'>
+          <Paragraphs
+            size={'6xl'}
+            weight={'semibold'}
+            className='text-green-600'
+          >
             Manel Romero i Vicente
           </Paragraphs>
-          <Paragraphs size={'2xl'} className={'font-inter'}>
+          <Paragraphs size={'2xl'} className={'pt-6'}>
             Frontend developer.
           </Paragraphs>
-          <p
-            className='text-2xl text-bold items-center'
-            style={{ fontFamily: 'Montserat, sans-serif' }}
-          >
+          <Paragraphs className='text-2xl text-bold items-center'>
             ✉️ manelrv(at)gmail(dot)com
-          </p>
+          </Paragraphs>
           <div className='flex gap-4 pt-8'>
             {socialURLs.map((socialURL, index) => (
               <SocialIcon

@@ -7,7 +7,7 @@ import 'rc-tooltip/assets/bootstrap.css'
 
 const App = (): JSX.Element => {
   return (
-    <div className={'font-inter'}>
+    <div className={'font-montserrat'}>
       <NavBar />
       <Header />
       <Presentation />

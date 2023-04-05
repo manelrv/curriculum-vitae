@@ -24,13 +24,27 @@ const ProfessionaExperience = (): JSX.Element => {
   }, [])
 
   return (
-    <div className='w-full bg-gradient-to-l from-zinc-600 to-zinc-800 text-gray-300'>
-      <div className='max-w-[1280px] m-auto flex flex-col flex-wrap p-10 sm:p-20 text-gray-300'>
-        <Paragraphs size={'3xl'} weight={'bold'}>
+    <div className='w-full bg-gradient-to-l from-slate-100 to-white text-gray-900'>
+      <div className='max-w-[1280px] m-auto flex flex-col flex-wrap p-10 sm:p-20'>
+        <Paragraphs size={'4xl'} weight={'bold'} className={'sm:text-7xl'}>
           Experiencia profesional
         </Paragraphs>
+        <Paragraphs
+          size={'sm'}
+          className={'sm:text-xl transition-all duration-500 ease-in-out pt-8'}
+        >
+          Cuento con amplia experiencia en el desarrollo web y la gestión de
+          servidores y redes, así como en la atención a usuarios y la
+          configuración y explotación de bases de datos.
+        </Paragraphs>
+        <Paragraphs
+          size={'sm'}
+          className={'sm:text-xl transition-all duration-500 ease-in-out pt-8'}
+        >
+          Estas son algunas de las empresas en las que he trabajado:
+        </Paragraphs>
         <nav
-          className={'flex flex-wrap gap-4 pt-8 justify-center items-center'}
+          className={'flex flex-wrap gap-4 pt-8 justify-between items-center'}
         >
           <Tooltip
             overlay={
@@ -44,32 +58,24 @@ const ProfessionaExperience = (): JSX.Element => {
                 currentItem - 1 >= 0
                   ? 'cursor-pointer hover:(animate-pulse border-green-500)'
                   : 'opacity-50 cursor-not-allowed'
-              }  border-1 border-transparent flex items-center justify-center p-4 rounded-md`}
+              }  border-1 border-transparent flex items-center justify-center p-4 rounded-md hidden sm:inline-block`}
               onClick={() => {
                 setCurrentItem((current) =>
                   current - 1 >= 0 ? current - 1 : 0
                 )
               }}
             >
-              <ArrowBackIos color={'success'} />
+              <ArrowBackIos color={'success'} style={{ fontSize: 40 }} />
             </div>
           </Tooltip>
 
           <div
-            className={`bg-gray-400 p-2 m-2 gap-1 rounded-md text-white flex flex-col items-center w-32 sm:w-56 border-1 border-transparent select-none`}
+            className={`p-4 m-2 gap-4 flex flex-col sm:flex-row select-none items-center justify-center m-auto`}
           >
-            <Paragraphs
-              size={'xs'}
-              className={
-                'sm:text-sm transition-all duration-500 ease-in-out text-center'
-              }
-            >
-              {professionalExperienceItems[currentItem].company}
+            <Paragraphs size={'2xl'} className={'sm:text-4xl text-center'}>
+              {professionalExperienceItems[currentItem].company}:
             </Paragraphs>
-            <Paragraphs
-              size={'xs'}
-              className={'sm:text-sm transition-all duration-500 ease-in-out'}
-            >
+            <Paragraphs size={'2xl'} className={'sm:text-4xl'}>
               {professionalExperienceItems[currentItem].timeWorking}
             </Paragraphs>
           </div>
@@ -88,7 +94,7 @@ const ProfessionaExperience = (): JSX.Element => {
                 currentItem + 1 < professionalExperienceItems.length
                   ? 'cursor-pointer hover:(animate-pulse border-green-500)'
                   : 'opacity-50 cursor-not-allowed'
-              }  border-1 border-transparent flex items-center justify-center p-4 rounded-md`}
+              }  border-1 border-transparent flex items-center justify-center p-4 rounded-md hidden sm:inline-block`}
               onClick={() => {
                 setCurrentItem((current) =>
                   current + 1 >= professionalExperienceItems.length
@@ -97,15 +103,18 @@ const ProfessionaExperience = (): JSX.Element => {
                 )
               }}
             >
-              <ArrowForwardIos color={'success'} />
+              <ArrowForwardIos color={'success'} style={{ fontSize: 40 }} />
             </div>
           </Tooltip>
         </nav>
-        <ProgressBar currentItem={currentItem} />
+        <ProgressBar
+          currentItem={currentItem}
+          setCurrentItem={setCurrentItem}
+        />
 
         <div
           className={
-            'mt-4 min-h-[620px] p-4 flex flex-col gap-8 justify-between transition-all duration-500 ease-in-out bg-gray-800 flex flex-col gap-8 p-8 rounded-xl'
+            'mt-4 min-h-[620px] p-4 flex flex-col gap-8 justify-between transition-all duration-500 ease-in-out bg-gray-100 shadow-xl flex flex-col gap-8 p-8 rounded-xl'
           }
         >
           <div className={'flex gap-8 flex-col'}>
@@ -115,10 +124,10 @@ const ProfessionaExperience = (): JSX.Element => {
               }
             >
               <Paragraphs
-                size={'sm'}
+                size={'2xl'}
                 weight={'bold'}
                 className={
-                  'sm:text-2xl transition-all duration-500 ease-in-out border-b-2 border-green-500'
+                  'sm:text-4xl transition-all duration-500 ease-in-out border-b-2 border-green-500'
                 }
               >
                 {professionalExperienceItems[currentItem].role}
@@ -127,15 +136,11 @@ const ProfessionaExperience = (): JSX.Element => {
               <img
                 src={professionalExperienceItems[currentItem]?.logo}
                 alt={`${professionalExperienceItems[currentItem]?.company}__logo`}
-                className={'h-32 bg-slate-200 rounded-xl p-8'}
+                className={'h-32 p-8'}
               />
             </div>
 
-            <div
-              className={
-                'bg-gray-500 rounded-xl shadow-lg shadow-gray-500 p-8 gap-4 flex flex-col'
-              }
-            >
+            <div className={'gap-4 flex flex-col'}>
               {professionalExperienceItems[currentItem].body.map(
                 (item, index) => (
                   <Paragraphs
@@ -160,7 +165,7 @@ const ProfessionaExperience = (): JSX.Element => {
                 <div
                   key={`technology__${item}`}
                   className={
-                    'bg-slate-200 text-black px-2 py-0.5 rounded-xl shadow-lg shadow-gray-900'
+                    ' text-black px-2 py-0.5 rounded-xl shadow shadow-gray-900 bg-zinc-100 hover:bg-white text-zinc-500 select-none transition-all duration-500 ease-in-out hover:transform hover:scale-150 cursor-pointer'
                   }
                 >
                   <Paragraphs size={'xs'}>{item}</Paragraphs>
@@ -169,14 +174,6 @@ const ProfessionaExperience = (): JSX.Element => {
             )}
           </div>
         </div>
-        <Paragraphs
-          size={'sm'}
-          className={'sm:text-xl transition-all duration-500 ease-in-out pt-8'}
-        >
-          📊 En resumen, cuento con amplia experiencia en el desarrollo web y la
-          gestión de servidores y redes, así como en la atención a usuarios y la
-          configuración y explotación de bases de datos.
-        </Paragraphs>
       </div>
     </div>
   )
